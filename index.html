@@ -13,13 +13,43 @@
     <title>wiki-homero</title>
   </head>
   <body>
-    <header class="bg-warning d-flex align-items-center justify-content-between gap-4 w-100">
-      <img src="/assets/img/donut-oink.png" alt="rosquilla icono" class="">
+    <header
+      class="bg-warning d-flex align-items-center justify-content-between gap-4 w-100"
+    >
+      <img src="/assets/img/donut-oink.png" alt="rosquilla icono" class="" />
       <h1 class="text-light fs-1 fw-bold">SIMPSONISATE</h1>
-      <img src="/assets/img/homer.png" alt="homero simpson">
+      <img src="/assets/img/homer.png" alt="homero simpson" />
     </header>
-    <main>
+    
+    <main class="p-4 bg-body-secondary min-vh-100">
+      <div class="container-fluid">
+        <!------------------------ barra de busqueda ---------------------------------------------->
+        <div class="d-flex">
+          <input
+            class="form-control me-2"
+            type="text"
+            placeholder="Buscar personaje..."
+          />
 
+          <button class="btn btn-primary bg-warning border-warning">
+            Buscar
+          </button>
+        </div>
+        <!--------------- contenedor de tarjetas ---------------------------------------------->
+        <div class="container-fluid">
+          <div class="row g-2" id="card-container">
+            <!-- <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                </p>
+                <a href="#" class="btn btn-primary">ver detalle</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
