@@ -34,4 +34,9 @@ const trabajarPersonaje = async () =>{
     console.log(capturadorPersonajes);
 }
 
+
+const mostrarPersonaje = async () =>{
+    
+}
+
 trabajarPersonaje()

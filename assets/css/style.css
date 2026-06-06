@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header  img{
+    width: 80px;
+}
+
+header img:last-child{
+    width: 120px;
+}
+
+
