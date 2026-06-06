@@ -1,14 +1,13 @@
 const URL_API = "https://thesimpsonsapi.com/api/characters";
 let fragment = document.createDocumentFragment();
 
-let persona = [];
+let capturadorPersonajes = [];
 
 const traerPersonajes = async  () =>{
     try {
         const response = await fetch(URL_API);
         const data = await response.json();
         console.log(data)
-        console.log(data.results);
         return data
     } catch (error) {
         console.log("tuvimos problemas, error: ", error)
@@ -27,5 +26,12 @@ const traerUnPersonaje = async (id)=>{
     }
 }
 
-traerPersonajes()
-traerUnPersonaje(20)
+
+const trabajarPersonaje = async () =>{
+    const ObjetoPersonajes = await traerPersonajes()
+    let personajes = ObjetoPersonajes.results
+    capturadorPersonajes = personajes
+    console.log(capturadorPersonajes);
+}
+
+trabajarPersonaje()
