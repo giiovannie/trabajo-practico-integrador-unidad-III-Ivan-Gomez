@@ -114,11 +114,11 @@ contenedorCards.addEventListener("click", (e)=>{
 
         let selectorFrases = Math.floor(Math.random() * personajeCapturado.phrases.length);
 
-        
+
         document.getElementById('modalNombre').textContent = personajeCapturado.name
         document.getElementById('modalImg').src = `https://cdn.thesimpsonsapi.com/500/character/${personajeCapturado.id}.webp`
-        document.getElementById('modalEdad').textContent = personajeCapturado.age
-        document.getElementById('modalFecha').textContent = personajeCapturado.dateOfBirth
+        document.getElementById('modalEdad').textContent = personajeCapturado.age ?? "no se sabe"
+        document.getElementById('modalFecha').textContent = personajeCapturado.dateOfBirth ?? "no se sabe"
         document.getElementById('modalGenero').textContent = personajeCapturado.gender
         document.getElementById('modalOcupacion').textContent = personajeCapturado.occupation
         document.getElementById('modalEstado').textContent = personajeCapturado.status

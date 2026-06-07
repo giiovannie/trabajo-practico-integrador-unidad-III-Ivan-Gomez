@@ -18,3 +18,9 @@ header img:last-child{
 .card{
     height: 100%;
 }
+
+.card img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
