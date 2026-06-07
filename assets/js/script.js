@@ -97,6 +97,8 @@ loader()
 
 //seccion del modal
 
+
+
 contenedorCards.addEventListener("click", (e)=>{
         const tarjeta = e.target.closest(".card")
 
@@ -110,6 +112,9 @@ contenedorCards.addEventListener("click", (e)=>{
 
         console.log(`coincidencia: ${personajeCapturado.id}`)
 
+        let selectorFrases = Math.floor(Math.random() * personajeCapturado.phrases.length);
+
+        
         document.getElementById('modalNombre').textContent = personajeCapturado.name
         document.getElementById('modalImg').src = `https://cdn.thesimpsonsapi.com/500/character/${personajeCapturado.id}.webp`
         document.getElementById('modalEdad').textContent = personajeCapturado.age
@@ -117,7 +122,7 @@ contenedorCards.addEventListener("click", (e)=>{
         document.getElementById('modalGenero').textContent = personajeCapturado.gender
         document.getElementById('modalOcupacion').textContent = personajeCapturado.occupation
         document.getElementById('modalEstado').textContent = personajeCapturado.status
-        document.getElementById('modalFrase').textContent = personajeCapturado.phrases[0]
+        document.getElementById('modalFrase').textContent = personajeCapturado.phrases[selectorFrases]
 
         modalIntance.show()
 })
