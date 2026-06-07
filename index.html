@@ -20,7 +20,7 @@
       <h1 class="text-light fs-1 fw-bold">SIMPSONISATE</h1>
       <img src="/assets/img/homer.png" alt="homero simpson" />
     </header>
-    
+
     <main class="p-4 bg-body-secondary min-vh-100">
       <div class="container-fluid">
         <!------------------------ barra de busqueda ---------------------------------------------->
@@ -32,9 +32,13 @@
             id="buscador"
           />
 
-          <button class="btn btn-primary bg-warning border-warning" id="btn-primary">
+          <button
+            class="btn btn-primary bg-warning border-warning"
+            id="btn-primary"
+          >
             Buscar
-          </button> <!-- evento de btn -->
+          </button>
+          <!-- evento de btn -->
         </form>
         <!--------------- contenedor de tarjetas ---------------------------------------------->
         <div class="container-fluid">
@@ -48,6 +52,37 @@
                 <a href="#" class="btn btn-primary">ver detalle</a>
               </div>
             </div> -->
+          </div>
+        </div>
+
+        <!-- contenedor de la ventana modal -->
+
+        <div>
+          <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalNombre"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                  <img id="modalImg" src="" alt="" class="img-fluid mb-3" />
+                  <p><strong>Edad:</strong> <span id="modalEdad"></span></p>
+                  <p><strong>Fecha de nacimiento:</strong> <span id="modalFecha"></span></p>
+                  <p><strong>Género:</strong> <span id="modalGenero"></span></p>
+                  <p><strong>Ocupación:</strong> <span id="modalOcupacion"></span></p>
+                  <p><strong>Estado:</strong> <span id="modalEstado"></span></p>
+                  <p><strong>Frase:</strong> <em id="modalFrase"></em></p>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
