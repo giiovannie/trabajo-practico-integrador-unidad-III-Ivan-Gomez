@@ -33,20 +33,6 @@ const traerPersonajes = async  () =>{
     }
 }
 
-
-const traerUnPersonaje = async (id)=>{
-    try {
-        const response = await fetch(`${URL_API}/${id}`);
-        const data = await response.json();
-
-        console.log(data)
-        return data
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-
 const trabajarPersonajes = async (seleccion) =>{
     const ObjetoPersonajes = await traerPersonajes()
 
